@@ -5,22 +5,29 @@ import { useRegisterMutation } from '../slices/emailsApiSlice';
 import { toast } from 'react-toastify';
 
 const Showcase = () => {
+    // Email state
     const [email, setEmail] = useState<string>('')
 
     const [register, {isLoading}] = useRegisterMutation()
 
     const handleEmail = async () => {
         try {
+            // Send POST req
             const res = await register({email}).unwrap()
 
+            // Check for res
             if(res){
+                // Send toast message
                 toast.success("Stay tuned! We'll notify you upon launch.")
             }else{
+                // Else send toast error
                 toast.error("Internal error, Try again!")
             }
         } catch (err:any) {
+            // Send toast error
             toast.error(err?.data?.message || err.error)
         }
+        // Clear email
         setEmail('')
     }
 
