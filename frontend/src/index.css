@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.showcase{
+    background: url('./components/images/lineOfPeople.png');
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.showcase::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo img{
+    transform: translateY(-50px);
+}
+
+.emailFormInput:focus{
+    outline: none;
+}
+
+@media(max-width: 968px){
+    .showcase{
+        height: 120vh;
+    }
+
+    .showcase::after{
+        height: 120vh;
+    }
+}
+
+@media(max-width: 768px){
+    .showcase{
+        height: 140vh;
+    }
+
+    .showcase::after{
+        height: 140vh;
+    }
+}
