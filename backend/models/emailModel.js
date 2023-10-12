@@ -6,6 +6,8 @@ const emailSchema = mongoose.Schema({
         required: true,
         unique: true
     }
+},{
+    timestamps: true
 })
 
 const Emails = mongoose.model('Emails', emailSchema)
