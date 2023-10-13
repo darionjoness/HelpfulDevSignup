@@ -43,6 +43,34 @@ body{
     outline: none;
 }
 
+.inputContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer label{
+    position: absolute;
+    pointer-events: none;
+    color: #6f81a5;
+    font-size: 16px;
+    line-height: 1;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    transition: all 0.25s ease;
+}
+
+.inputContainer:focus-within label{
+    transform: translateY(-45px) scale(0.8);
+    color: lightgray;
+}
+
+.inputContainer .filled{
+    transform: translateY(-45px) scale(0.8);
+}
+
 @media(max-width: 968px){
     .showcase{
         height: 120vh;
