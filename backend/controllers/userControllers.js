@@ -2,11 +2,16 @@ import asyncHandler from 'express-async-handler'
 import Emails from '../models/emailModel.js'
 import nodemailer from 'nodemailer'
 
+
 // @desc    Sign user up for notifications
 // route    /api/register
 // @access  Public
 const signupUser = asyncHandler(async (req, res) => {
 
+    // Get email from the body
+    const { email } = req.body
+    
+    // Create email transport
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         service: 'gmail',
@@ -18,10 +23,7 @@ const signupUser = asyncHandler(async (req, res) => {
         from: process.env.EMAIL_USER
     })
 
-    // Get email from the body
-    const { email } = req.body
-
-
+    // Create mail options
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,

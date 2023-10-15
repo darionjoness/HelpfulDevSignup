@@ -10,7 +10,24 @@ const Showcase = () => {
 
     const [register, {isLoading}] = useRegisterMutation()
 
+    // Email test regex
+    let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
     const handleEmail = async () => {
+
+        // Check if the user typed in a email
+        if(!email){
+            toast.error('Please type in a email')
+            return 
+        }
+
+        if(!re.test(email)){
+            toast.error('Please type in a valid email')
+            return 
+        }
+
+
         try {
             // Send POST req
             const res = await register({email}).unwrap()
@@ -32,16 +49,16 @@ const Showcase = () => {
     }
 
   return (
-    <div className='showcase'>
-        <div className='showcaseItems container px-10 overflow-hidden'>
+    <div className='showcase overflow-hidden '>
+        <div className='showcaseItems container mx-auto px-10 overflow-hidden'>
             <div className="logo">
                 <img className='z-10 relative h-60' src={helpfulDevLogo} alt="" />
             </div>
-            <h1 className='text-5xl font-medium text-center text-white z-10 relative -translate-y-12'>Connecting Non-Profits with volunteer Software Engineers!</h1>
+            <h1 className='text-5xl w-full font-medium text-center text-white z-10 relative -translate-y-12'>Connecting Non-Profits with volunteer Software Engineers!</h1>
             <h3 className='text-xl text-center text-white z-10 relative my-7 -translate-y-12'>More info coming soon! Type in your email address to get notified.</h3>
             <div className="emailForm mt-10 text-center flex justify-center -translate-y-12 z-10 relative mt ">
                 <div className="inputContainer">
-                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" className='emailFormInput z-10 relative rounded bg-transparent border-4 border-[#E93D3D] px-5 py-2 w-80 text-white' />
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className='emailFormInput z-10 relative rounded bg-transparent border-4 border-[#E93D3D] px-5 py-2 w-80 text-white' />
                     <label className={email && 'filled'} htmlFor="">Email...</label>
                 </div>
                 <button onClick={handleEmail} className='z-10 relative bg-[#E93D3D] mx-2 text-white rounded py-2 px-3 text-xl focus:outline-none'>Notify Me!</button>

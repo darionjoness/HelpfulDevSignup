@@ -19,7 +19,7 @@ body{
 .showcase{
     background: url('./components/images/lineOfPeople.png');
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@ body{
     content: '';
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -88,5 +88,23 @@ body{
 
     .showcase::after{
         height: 140vh;
+    }
+
+    .emailForm{
+        flex-direction: column;
+    }
+
+    .emailForm input{
+        width: 100%;
+    }
+
+    .emailForm button{
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .showcaseItems h1{
+        font-size: 2.25rem;
     }
 }
