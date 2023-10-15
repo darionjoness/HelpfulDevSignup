@@ -52,7 +52,9 @@ const Showcase = () => {
     <div className='showcase overflow-hidden '>
         <div className='showcaseItems container mx-auto px-10 overflow-hidden'>
             <div className="logo">
-                <img className='z-10 relative h-60' src={helpfulDevLogo} alt="" />
+                <a href="">
+                    <img className='z-10 relative h-60' src={helpfulDevLogo} alt="" />
+                </a>
             </div>
             <h1 className='text-5xl w-full font-medium text-center text-white z-10 relative -translate-y-12'>Connecting Non-Profits with volunteer Software Engineers!</h1>
             <h3 className='text-xl text-center text-white z-10 relative my-7 -translate-y-12'>More info coming soon! Type in your email address to get notified.</h3>

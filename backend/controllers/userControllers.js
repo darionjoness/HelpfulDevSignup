@@ -8,8 +8,17 @@ import nodemailer from 'nodemailer'
 // @access  Public
 const signupUser = asyncHandler(async (req, res) => {
 
+    // Regex to check for valid email
+    let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     // Get email from the body
     const { email } = req.body
+
+    // Check if email is in a valid format
+    if(!re.test(email)){
+        res.status(400)
+        throw new Error('Invalid email format')
+    }
     
     // Create email transport
     const transporter = nodemailer.createTransport({
