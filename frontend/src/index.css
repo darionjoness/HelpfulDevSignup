@@ -27,7 +27,7 @@ body{
 
 .showcase::after{
     content: '';
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     height: 100%;
     width: 100%;
     position: absolute;
