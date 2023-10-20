@@ -65,7 +65,7 @@ const Showcase = () => {
                 </div>
                 <button onClick={handleEmail} className='z-10 relative bg-[#E93D3D] mx-2 text-white rounded py-2 px-3 text-xl focus:outline-none'>Notify Me!</button>
             </div>
-            <p className='text-white z-10 relative text-center mt-20 text-xl'>Follow the development journey below!</p>
+            <p className='text-white z-10 relative text-center text-xl'>Follow the development journey below!</p>
             <div className="socialIcons flex text-white z-10 relative align-center justify-center my-5">
                 <a href='' className='mx-2 text-4xl'><RiTwitterXFill /></a>
                 <a href='' className='mx-2 text-4xl'><RiInstagramLine /></a>
