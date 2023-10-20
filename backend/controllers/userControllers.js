@@ -39,7 +39,7 @@ const signupUser = asyncHandler(async (req, res) => {
         subject: 'Thank You for Joining HelpfulDev: Connecting Engineers with Causes',
         html: `
         <h1>Welcome to HelpfulDev,</h1>
-        <p>where code meets compassion! We are overjoyed to have you on board as a valued member of our community.</p>
+        <p>Where code meets compassion! We are overjoyed to have you on board as a valued member of our community.</p>
         <p>Your decision to join us is a testament to your commitment to making a positive impact. By linking volunteer software engineers with non-profits, we're on a mission to change lives through technology. Together, we'll create a world where every line of code serves a greater purpose.</p>
         <p>As we gear up for the launch, expect exclusive previews, insightful content, and updates on how we're shaping the future of tech-for-good. Your input will be invaluable in refining our platform to meet the unique needs of both engineers and non-profits.</p>
         <p>Should you ever have questions, ideas, or just want to chat, don't hesitate to get in touch. We're here to listen and learn from you.
