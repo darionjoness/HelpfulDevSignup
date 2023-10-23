@@ -67,8 +67,8 @@ const Showcase = () => {
             </div>
             <p className='text-white z-10 relative text-center text-xl'>Follow the development journey below!</p>
             <div className="socialIcons flex text-white z-10 relative align-center justify-center my-5">
-                <a href='' className='mx-2 text-4xl'><RiTwitterXFill /></a>
-                <a href='' className='mx-2 text-4xl'><RiInstagramLine /></a>
+                <a target='_blank' href='https://twitter.com/HelpfulDevApp' className='mx-2 text-4xl'><RiTwitterXFill /></a>
+                <a target='_blank' href='https://www.instagram.com/helpfuldevapp/' className='mx-2 text-4xl'><RiInstagramLine /></a>
             </div>
         </div>
     </div>
